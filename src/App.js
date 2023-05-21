@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className='container pt-4 mx-auto text-center main'>
-      <img src='tanaki-hero.png' className='mx-auto h-auto max-h-[90vh] w-auto max-w-full' />
+      <img src='tanaki-hero.png' className='mx-auto h-auto max-h-[90vh] w-auto max-w-full' alt="Tanaki Paint" />
       
       <h1 className='pb-3 text-4xl'>Tanaki</h1>
       <h2 className='pb-8 text-2xl'>タナキ</h2>
