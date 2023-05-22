@@ -15,6 +15,9 @@ function App() {
       </div>
 
       <div className='py-4 text-lg underline'><a href="https://discord.gg/fr6X7r4CTX">Discord</a></div>
+      <a href="https://lingonberry.ai">
+        <img src='lingonberry-logo.svg' className='mx-auto h-auto max-h-[10vh] w-16 p-3' alt="Lingonberry AI" />
+      </a>
     </div>
   );
 }
