@@ -1,4 +1,6 @@
 # Redirects from what the browser requests to what we serve
 /home                /
 /paint              https://lingonberryai.notion.site/Tanaki-Paint-d0feded0ddff410098d9841547c4dd47
-/discord           https://discord.gg/YHA2jCuPb7 
+/discord           https://discord.gg/YHA2jCuPb7
+/download           https://discord.gg/YHA2jCuPb7 
+
