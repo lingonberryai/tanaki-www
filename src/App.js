@@ -34,8 +34,8 @@ function App() {
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
         <img src="show.png" alt="The Tanaki Show" />
-        <span className='block max-w-sm pb-4 text-4xl text-white' style={shadowStyle}>
-          Watch  The Tanaki Show
+        <span className='block pb-4 text-3xl text-white max-w-' style={shadowStyle}>
+          Watch The Tanaki Show.
         </span>
         
         <span className='p-8 text-2xl font-bold live'>LIVE</span>
@@ -58,7 +58,7 @@ function App() {
 
       <img className="pt-10" src="discord.png" alt="Discord" />
       <span className='text-4xl text-white' style={shadowStyle}>
-        Make new friends and art in Discord.
+        Make friends and art in Discord.
       </span>
 
       <div className='pt-20 mx-auto my-20 text-center w-200'>

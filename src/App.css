@@ -55,7 +55,7 @@ body {
 
 /* Reset default margin for body */
 body, html {
-  background-image: url('../public/space.png'); 
+  background-image: url('../public/space.webp'); 
   background-size: cover;
   background-repeat: no-repeat; 
   background-attachment: fixed; 
