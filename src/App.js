@@ -46,7 +46,11 @@ function App() {
 
       <a className="big-link" href="https://tiktok.com/@hellotanaki">
         <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-          <img src="iphone-tanaki-show.png" alt="The Tanaki Show" />
+          <img
+            src="iphone-tanaki-show.webp"
+            alt="The Tanaki Show"
+            loading="lazy"
+          />
           <span
             className="block pb-4 text-3xl text-white max-w-"
             style={shadow}
@@ -61,7 +65,12 @@ function App() {
 
       <a className="big-link" href="/download">
         <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-          <img className="mb-2" src="paint.png" alt="Tanaki Paint App" />
+          <img
+            className="mb-2"
+            src="paint.webp"
+            alt="Tanaki Paint App"
+            loading="lazy"
+          />
           <span className="text-4xl text-white " style={shadow}>
             Paint with Tanaki.
           </span>
@@ -71,7 +80,7 @@ function App() {
       <br />
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-        <img className="mb-2" src="text.png" alt="The Tanaki Show" />
+        <img className="mb-2" src="text.webp" alt="The Tanaki Show" />
         <span className="text-4xl text-white" style={shadow}>
           Text Tanaki.
         </span>
@@ -80,7 +89,7 @@ function App() {
       <br />
 
       <a className="big-link" href="/download">
-        <img className="pt-10" src="discord.png" alt="Discord" />
+        <img className="pt-10" src="discord.webp" alt="Discord" />
         <span className="text-4xl text-white" style={shadow}>
           Make friends and art in Discord.
         </span>
