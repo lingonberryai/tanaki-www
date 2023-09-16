@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Canvas, useLoader, useThree } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { AnimationMixer, MeshStandardMaterial } from 'three';
+import { AnimationMixer, Color, MeshStandardMaterial, Float32BufferAttribute } from 'three'; // Import necessary Three.js components
+
+// Define the VertexColors constant
+const VertexColors = 2;
 
 function AnimatedModel({ url }) {
     const gltf = useLoader(GLTFLoader, url);
@@ -29,7 +32,7 @@ function AnimatedModel({ url }) {
                     }
                 }
                 lastTimestamp = timestamp;
-                
+
                 requestAnimationFrame(animate);
             }
 
@@ -43,7 +46,23 @@ function AnimatedModel({ url }) {
             }
 
             if (object.name === bodyMesh) {
-                object.material = new MeshStandardMaterial({ color: 'pink' });
+                const startColor = new Color(0xFFE600); 
+                const endColor = new Color(0xFF4E8D); 
+
+                const minY = Math.min(...object.geometry.attributes.position.array.filter((_, i) => i % 3 === 1));
+                const maxY = Math.max(...object.geometry.attributes.position.array.filter((_, i) => i % 3 === 1));
+
+                const colors = [];
+
+                for (let i = 0; i < object.geometry.attributes.position.count; i++) {
+                    const y = object.geometry.attributes.position.getY(i);
+                    const gradientPosition = (y - minY) / (maxY - minY);
+                    const color = new Color().lerpColors(startColor, endColor, gradientPosition);
+                    colors.push(color.r, color.g, color.b);
+                }
+
+                object.geometry.setAttribute('color', new Float32BufferAttribute(colors, 3));
+                object.material = new MeshStandardMaterial({ vertexColors: VertexColors });
                 object.material.needsUpdate = true;
             }
         });
@@ -60,14 +79,14 @@ function AnimatedModel({ url }) {
     }, [animations, scene, clock]);
 
     return (
-        <primitive object={scene} position={[0, -0.5, 0]} scale={[2, 2, 2]} children-0-castShadow />
+        <primitive object={scene} position={[0, -0.5, 0]} scale={[2, 2, 2]} castShadow />
     );
 }
 
 export function TanakiModel() {
     return (
         <Canvas style={{ width: '100%', height: '1000px' }}>
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.8} />
             <directionalLight
                 position={[5, 10, 5]} // position it in the scene
                 intensity={1}         // light intensity
