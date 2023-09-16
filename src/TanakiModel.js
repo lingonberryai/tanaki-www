@@ -52,6 +52,7 @@ function AnimatedModel({ url }) {
 
       if (object.name === bodyMesh) {
         const startColor = new Color(0xffe600)
+        const midColor = new Color(0xff4e8d) // Define a midpoint color.
         const endColor = new Color(0xff4e8d)
 
         const minY = Math.min(
@@ -70,11 +71,18 @@ function AnimatedModel({ url }) {
         for (let i = 0; i < object.geometry.attributes.position.count; i++) {
           const y = object.geometry.attributes.position.getY(i)
           const gradientPosition = (y - minY) / (maxY - minY)
-          const color = new Color().lerpColors(
-            startColor,
-            endColor,
-            gradientPosition,
-          )
+
+          let color
+          if (gradientPosition < 0.5) {
+            // Use lerp between start and mid colors.
+            const scaledPosition = gradientPosition * 2 // scale from [0, 0.5] to [0, 1]
+            color = new Color().lerpColors(startColor, midColor, scaledPosition)
+          } else {
+            // Use lerp between mid and end colors.
+            const scaledPosition = (gradientPosition - 0.5) * 2 // scale from [0.5, 1] to [0, 1]
+            color = new Color().lerpColors(midColor, endColor, scaledPosition)
+          }
+
           colors.push(color.r, color.g, color.b)
         }
 
