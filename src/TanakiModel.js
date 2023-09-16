@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { Canvas, useLoader, useThree } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { AnimationMixer } from 'three';
+import { AnimationMixer, MeshStandardMaterial } from 'three';
 
 function AnimatedModel({ url }) {
     const gltf = useLoader(GLTFLoader, url);
     const { scene, animations } = gltf;
     const { clock } = useThree();
     const mixerRef = useRef(null);
+
+    const handMeshes = ['handL_1', 'handR_1'];
+    const bodyMesh = 'BodyMesh001';
 
     // 30fps in seconds
     const frameTime = 300000;
@@ -27,6 +30,18 @@ function AnimatedModel({ url }) {
             }
             animate();
         }
+
+        scene.traverse((object) => {
+            if (object.isMesh && handMeshes.includes(object.name)) {
+                object.material = new MeshStandardMaterial({ color: 'yellow' });
+                object.material.needsUpdate = true;
+            }
+
+            if (object.name === bodyMesh) {
+                object.material = new MeshStandardMaterial({ color: 'pink' });
+                object.material.needsUpdate = true;
+            }
+        });
 
         return () => {
             if (mixerRef.current) {
