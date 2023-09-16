@@ -94,14 +94,14 @@ function AnimatedModel({ url }) {
     }, [animations, scene, clock]);
 
     return (
-        <primitive object={scene} position={[0, 0.2, 0]} scale={[1.6, 1.6, 1.6]} castShadow />
+        <primitive object={scene} position={[0, -2.5, 0]} scale={[3, 3, 3]} castShadow />
     );
 }
 
 export function TanakiModel() {
     return (
-        <Canvas style={{ width: '100%', height: '1000px' }}>
-            <ambientLight intensity={0.8} />
+        <Canvas style={{ width: '400px', height: '400px' }}>
+            <ambientLight intensity={1} />
             <directionalLight
                 position={[5, 10, 5]} // position it in the scene
                 intensity={1}         // light intensity

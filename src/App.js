@@ -2,21 +2,41 @@ import { TanakiModel } from './TanakiModel';
 import './App.css';
 
 function App() {
+  const shadowStyle = {
+    textShadow: '0 var(--text-shadow-offset-y) 10px #1D014C, 0 var(--text-shadow-offset-y) 20px #6600cc', 
+  };
+  
+
   return (
     <div className='container pt-4 mx-auto text-center main'>
-      <TanakiModel />
-      <img src='tanaki-hero.png' className='mx-auto h-auto max-h-[90vh] w-auto max-w-full' alt="Tanaki Paint" />
-      <h1 className='pb-3 text-6xl'>Tanaki</h1>
-      <h2 className='pb-8 text-4xl'>タナキ</h2>
-      <p className='text-2xl'>A new friend, from the creator of <a className="underline" href="https://tiktok.com/@molabsai">MO</a>.</p>
-      <a href="/download" className="inline-block p-4 mt-8 text-2xl font-semibold text-white bg-pink-600 rounded-xl">Download Early Beta!</a>
-      <div className="pt-8 max-w-sm mx-auto mt-5 text-xl text-center text-pink-600 px-2vw pb-[2vh]">
-        Tanaki is free to use under a <a className="underline" href="https://lingonberryai.notion.site/Creative-Commons-1ad8a5b4979c4faa932dd048639d459c">Creative Commons License.</a>
+      <div className='flex justify-center'>
+        <TanakiModel />
       </div>
-      <div className='py-4 text-lg underline'><a href="https://discord.gg/fr6X7r4CTX">Discord</a></div>
-      <a href="https://lingonberry.ai">
-        <img src='lingonberry-logo.svg' className='mx-auto h-auto max-h-[10vh] w-16 p-3' alt="Lingonberry AI" />
-      </a>
+
+      <div className='text-white'>
+        {/* Apply the text shadow variable to your text elements */}
+        <h1 className='pb-3 text-7xl' style={shadowStyle}>
+          Tanaki
+        </h1>
+        <h2 className='pb-8 text-5xl' style={shadowStyle}>
+          タナキ
+        </h2>
+
+        <span className='text-3xl' style={shadowStyle}>
+          Your creative superfriend.
+        </span>
+        <br />
+        <span className='block pt-2 text-xl' style={shadowStyle}>
+          Wherever you go, Tanaki is there for you.
+        </span>
+      </div>
+
+      <img className="max-w-md pt-10" src="show.png" alt="The Tanaki Show" />
+
+      <img className="pt-10" src="discord.png" alt="Discord" />
+      <span className='text-2xl text-white' style={shadowStyle}>
+        Make friends and art in Discord.
+      </span>
     </div>
   );
 }
