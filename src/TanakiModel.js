@@ -44,27 +44,42 @@ function AnimatedModel({ url }) {
                 object.material = new MeshStandardMaterial({ color: 'yellow' });
                 object.material.needsUpdate = true;
             }
-
+        
             if (object.name === bodyMesh) {
                 const startColor = new Color(0xFFE600); 
                 const endColor = new Color(0xFF4E8D); 
-
+        
                 const minY = Math.min(...object.geometry.attributes.position.array.filter((_, i) => i % 3 === 1));
                 const maxY = Math.max(...object.geometry.attributes.position.array.filter((_, i) => i % 3 === 1));
-
+        
                 const colors = [];
-
+        
                 for (let i = 0; i < object.geometry.attributes.position.count; i++) {
                     const y = object.geometry.attributes.position.getY(i);
                     const gradientPosition = (y - minY) / (maxY - minY);
                     const color = new Color().lerpColors(startColor, endColor, gradientPosition);
                     colors.push(color.r, color.g, color.b);
                 }
-
+        
                 object.geometry.setAttribute('color', new Float32BufferAttribute(colors, 3));
                 object.material = new MeshStandardMaterial({ vertexColors: VertexColors });
                 object.material.needsUpdate = true;
             }
+        
+            // Check if the name starts with "eyelid" and set a light blue color
+            if (object.name.startsWith('eyelid')) {
+
+                const eyeLidColor = new Color(0x5A9DEB);
+
+                object.material = new MeshStandardMaterial({ color: eyeLidColor });
+                object.material.needsUpdate = true;
+            }
+
+            if (object.name === "Mesh001") {
+        const pinkColor = new Color(0xFF1493); // Hex code for pink
+        object.material = new MeshStandardMaterial({ color: pinkColor });
+        object.material.needsUpdate = true;
+    }
         });
 
         return () => {
@@ -79,7 +94,7 @@ function AnimatedModel({ url }) {
     }, [animations, scene, clock]);
 
     return (
-        <primitive object={scene} position={[0, -0.5, 0]} scale={[2, 2, 2]} castShadow />
+        <primitive object={scene} position={[0, 0.2, 0]} scale={[1.6, 1.6, 1.6]} castShadow />
     );
 }
 
