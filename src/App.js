@@ -30,7 +30,10 @@ function App() {
           Your creative superfriend.
         </span>
 
-        <span className="block mt-2 text-xl text-black " style={glow}>
+        <span
+          className="block mt-2 text-xl text-white opacity-80"
+          style={shadow}
+        >
           With you, wherever you go.
         </span>
       </div>
