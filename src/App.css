@@ -26,31 +26,31 @@
 }
 
 .big-link {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.23, 0.01, 0, 1);
   display: inline-block;
   clear: both;
 }
 
+.big-link:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.big-link:active {
+  transform: scale(0.95);
+}
+
 .lingonberry {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.23, 0.01, 0, 1);
   display: inline-block;
 }
 
 .lingonberry:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .lingonberry:active {
-  transform: scale(0.95);
-}
-
-.big-link:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.big-link:active {
   transform: scale(0.95);
 }
 
