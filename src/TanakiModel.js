@@ -17,11 +17,10 @@ function AnimatedModel({ url }) {
   const { clock } = useThree()
   const mixerRef = useRef(null)
 
-  const handMeshes = ['handL_1', 'handR_1']
-  const bodyMesh = 'BodyMesh001'
-  const eyes = ['eyeM', 'eyeM001', 'eyeM002']
-
   useEffect(() => {
+    const handMeshes = ['handL_1', 'handR_1']
+    const bodyMesh = 'BodyMesh001'
+    const eyes = ['eyeM', 'eyeM001', 'eyeM002']
     if (animations && animations.length) {
       mixerRef.current = new AnimationMixer(scene)
       animations.forEach((clip) => {
