@@ -7,10 +7,10 @@ function App() {
       '0 var(--text-shadow-offset-y) 10px #1D014C, 0 var(--text-shadow-offset-y) 20px #6600cc',
   }
 
-  const glow = {
-    textShadow:
-      '0 var(--text-shadow-offset-y) 10px #ffffff, 0 var(--text-shadow-offset-y) 100px #FFC700',
-  }
+  // const glow = {
+  //   textShadow:
+  //     '0 var(--text-shadow-offset-y) 10px #ffffff, 0 var(--text-shadow-offset-y) 100px #FFC700',
+  // }
 
   return (
     <div className="container mx-auto text-center main">
