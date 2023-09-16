@@ -112,7 +112,9 @@ function App() {
       </a>
       <div className="flex-row max-w-md pb-12 mx-auto space-x-8 text-white shadow">
         <a href="mailto:pasquale@altbizney.com">contact</a>
-        <a href="https://twitter.com/lingonberryai">privacy</a>
+        <a href="https://psql.notion.site/Privacy-bd91b1b93d3c41998322792ef9968f3f?pvs=4">
+          privacy
+        </a>
         <a href="https://twitter.com/hellotanaki">twitter</a>
         <a href="https://tiktok.com/@hellotanaki">tiktok</a>
       </div>
