@@ -89,10 +89,6 @@
   }
 }
 
-body {
-}
-
-/* Reset default margin for body */
 body,
 html {
   background-image: url('../public/space.webp');
@@ -108,6 +104,9 @@ html {
 @media (max-width: 768px) {
   body {
     background-size: cover;
+    background-size: auto;
     background-position: top;
+    background-attachment: fixed, scroll;
+    background-repeat: no-repeat;
   }
 }
