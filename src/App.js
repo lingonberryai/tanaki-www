@@ -30,7 +30,7 @@ function App() {
           Your creative superfriend.
         </span>
 
-        <span className="block mt-2 text-xl text-black" style={glow}>
+        <span className="block mt-2 text-xl text-black " style={glow}>
           With you, wherever you go.
         </span>
       </div>
@@ -111,6 +111,15 @@ function App() {
           </span>
         </div>
       </a>
+      <div
+        className="flex-row max-w-md pb-12 mx-auto space-x-16 text-white"
+        style={shadow}
+      >
+        <a href="mailto:pasquale@altbizney.com">contact</a>
+        <a href="https://twitter.com/lingonberryai">privacy</a>
+        <a href="https://twitter.com/hellotanaki">twitter</a>
+        <a href="https://tiktok.com/@hellotanaki">tiktok</a>
+      </div>
     </div>
   )
 }
