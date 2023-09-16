@@ -43,20 +43,32 @@ function App() {
           Get Tanaki
         </a>
       </div>
-      <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-        <img src="iphone-tanaki-show.png" alt="The Tanaki Show" />
-        <span className="block pb-4 text-3xl text-white max-w-" style={shadow}>
-          Watch The Tanaki Show.
-        </span>
-        <span className="p-8 text-2xl font-bold live">LIVE</span>
-      </div>
 
-      <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-        <img className="mb-2" src="paint.png" alt="The Tanaki Show" />
-        <span className="text-4xl text-white " style={shadow}>
-          Paint with Tanaki.
-        </span>
-      </div>
+      <a className="big-link" href="https://tiktok.com/@hellotanaki">
+        <div className="max-w-sm pt-10 mx-auto my-20 text-center">
+          <img src="iphone-tanaki-show.png" alt="The Tanaki Show" />
+          <span
+            className="block pb-4 text-3xl text-white max-w-"
+            style={shadow}
+          >
+            Watch The Tanaki Show.
+          </span>
+          <span className="p-8 text-2xl font-bold live">LIVE</span>
+        </div>
+      </a>
+
+      <br />
+
+      <a className="big-link" href="/download">
+        <div className="max-w-sm pt-10 mx-auto my-20 text-center">
+          <img className="mb-2" src="paint.png" alt="Tanaki Paint App" />
+          <span className="text-4xl text-white " style={shadow}>
+            Paint with Tanaki.
+          </span>
+        </div>
+      </a>
+
+      <br />
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center">
         <img className="mb-2" src="text.png" alt="The Tanaki Show" />
@@ -65,11 +77,17 @@ function App() {
         </span>
       </div>
 
-      <img className="pt-10" src="discord.png" alt="Discord" />
-      <span className="text-4xl text-white" style={shadow}>
-        Make friends and art in Discord.
-      </span>
+      <br />
 
+      <a className="big-link" href="/download">
+        <img className="pt-10" src="discord.png" alt="Discord" />
+        <span className="text-4xl text-white" style={shadow}>
+          Make friends and art in Discord.
+        </span>
+      </a>
+
+      <br />
+      <br />
       <br />
       <a
         href="/download"
@@ -77,16 +95,22 @@ function App() {
       >
         Get Tanaki
       </a>
-      <div className="pt-20 mx-auto my-20 text-center w-200">
-        <img
-          className="w-20 mx-auto mb-4"
-          src="lingonberry-logo.svg"
-          alt="Lingonberry Intelligence"
-        />
-        <span className="text-white " style={shadow}>
-          Tanaki is brought to you by <br /> Lingonberry Intelligence.
-        </span>
-      </div>
+
+      <br />
+
+      <a className="lingonberry" href="https://lingonberry.ai">
+        <div className="pt-20 mx-auto my-20 text-center w-200">
+          <img
+            className="w-20 mx-auto mb-4"
+            src="lingonberry-logo.svg"
+            alt="Lingonberry Intelligence"
+          />
+
+          <span className="text-white " style={shadow}>
+            Tanaki is brought to you by <br /> Lingonberry Intelligence.
+          </span>
+        </div>
+      </a>
     </div>
   )
 }

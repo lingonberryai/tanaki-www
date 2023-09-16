@@ -25,6 +25,35 @@
   color: black;
 }
 
+.big-link {
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  clear: both;
+}
+
+.lingonberry {
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.lingonberry:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.lingonberry:active {
+  transform: scale(0.95);
+}
+
+.big-link:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.big-link:active {
+  transform: scale(0.95);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
