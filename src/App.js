@@ -31,7 +31,7 @@ function App() {
         </span>
 
         <span className="block mt-2 text-xl text-black" style={glow}>
-          Wherever you go, Tanaki is there for you.
+          With you, wherever you go.
         </span>
       </div>
 
@@ -44,14 +44,14 @@ function App() {
       </div>
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-        <img src="show.png" alt="The Tanaki Show" />
-        <span className="text-4xl text-white" style={shadow}>
+        <img className="mb-2" src="paint.png" alt="The Tanaki Show" />
+        <span className="text-4xl text-white " style={shadow}>
           Paint with Tanaki.
         </span>
       </div>
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-        <img src="show.png" alt="The Tanaki Show" />
+        <img className="mb-2" src="text.png" alt="The Tanaki Show" />
         <span className="text-4xl text-white" style={shadow}>
           Text Tanaki.
         </span>
