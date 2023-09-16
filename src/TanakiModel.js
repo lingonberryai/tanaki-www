@@ -12,9 +12,6 @@ function AnimatedModel({ url }) {
     const handMeshes = ['handL_1', 'handR_1'];
     const bodyMesh = 'BodyMesh001';
 
-    // 30fps in seconds
-    const frameTime = 300000;
-
     useEffect(() => {
         if (animations && animations.length) {
             mixerRef.current = new AnimationMixer(scene);
@@ -22,13 +19,21 @@ function AnimatedModel({ url }) {
                 mixerRef.current.clipAction(clip).play();
             });
 
-            const animate = () => {
-                if (mixerRef.current) {
-                    mixerRef.current.update(frameTime);  // Use frameTime instead of clock.getDelta()
+            let lastTimestamp;
+
+            const animate = (timestamp) => {
+                if (lastTimestamp !== undefined) {
+                    const elapsedTimeInSeconds = (timestamp - lastTimestamp) * 0.001; // Convert ms to seconds
+                    if (mixerRef.current) {
+                        mixerRef.current.update(elapsedTimeInSeconds);
+                    }
                 }
+                lastTimestamp = timestamp;
+                
                 requestAnimationFrame(animate);
             }
-            animate();
+
+            requestAnimationFrame(animate);
         }
 
         scene.traverse((object) => {
@@ -62,10 +67,7 @@ function AnimatedModel({ url }) {
 export function TanakiModel() {
     return (
         <Canvas style={{ width: '100%', height: '1000px' }}>
-
             <ambientLight intensity={0.5} />
-
-
             <directionalLight
                 position={[5, 10, 5]} // position it in the scene
                 intensity={1}         // light intensity
