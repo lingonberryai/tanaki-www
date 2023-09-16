@@ -110,3 +110,13 @@ html {
     background-repeat: no-repeat;
   }
 }
+
+.shadow {
+  box-shadow: none;
+  text-shadow: 0 var(--text-shadow-offset-y) 10px #1D014C, 0 var(--text-shadow-offset-y) 20px #6600cc;
+}
+
+.glow {
+  text-shadow: 0 var(--text-shadow-offset-y) 10px #ffffff, 0 var(--text-shadow-offset-y) 100px #FFC700;
+}
+
