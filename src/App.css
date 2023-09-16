@@ -104,3 +104,10 @@ html {
   padding: 0;
   background-color: black;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: top;
+  }
+}
