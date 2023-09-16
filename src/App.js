@@ -10,12 +10,12 @@ function App() {
       </div>
 
       <div className="flex flex-col text-white">
-        <h1 className="pb-3 text-7xl shadow">Tanaki</h1>
+        <h1 className="pb-3 shadow text-7xl">Tanaki</h1>
         <h2 className="pb-8 text-5xl shadow">タナキ</h2>
 
         <span className="text-3xl shadow">Your creative superfriend.</span>
 
-        <span className="block mt-2 text-xl text-black glow">
+        <span className="block mt-2 text-xl text-white shadow">
           With you, wherever you go.
         </span>
       </div>
@@ -37,7 +37,7 @@ function App() {
             loading="lazy"
             onError={handleImageError('/iphone-tanaki-show.png')} // Pass fallback image
           />
-          <span className="block pb-4 text-3xl text-white max-w- shadow">
+          <span className="block pb-4 text-3xl text-white shadow max-w-">
             Watch The Tanaki Show.
           </span>
           <span className="p-8 text-2xl font-bold live">LIVE</span>
