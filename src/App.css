@@ -2,7 +2,7 @@
   text-align: center;
 }
 :root {
-  --text-shadow-offset-y: 2px; 
+  --text-shadow-offset-y: 2px;
 }
 
 .live {
@@ -12,6 +12,17 @@
   border-radius: 4px;
   margin-left: 8px;
   margin-bottom: 4px;
+}
+
+.download-button {
+  background: linear-gradient(180deg, #fff 69.31%, #ffe600 139.11%);
+  transition: all 0.2s ease-in-out;
+  color: #5a24ac;
+}
+.download-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  color: black;
 }
 
 .App-logo {
@@ -50,15 +61,15 @@
 }
 
 body {
-  
 }
 
 /* Reset default margin for body */
-body, html {
-  background-image: url('../public/space.webp'); 
+body,
+html {
+  background-image: url('../public/space.webp');
   background-size: cover;
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
   margin: 0;
   padding: 0;

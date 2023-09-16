@@ -13,7 +13,7 @@ function App() {
   }
 
   return (
-    <div className="container pt-4 mx-auto text-center main">
+    <div className="container mx-auto text-center main">
       <div className="flex justify-center">
         <TanakiModel />
       </div>
@@ -35,6 +35,14 @@ function App() {
         </span>
       </div>
 
+      <div className="my-16">
+        <a
+          href="/download"
+          className="inline-block p-5 mx-auto text-4xl font-bold text-center text-black bg-white rounded-full download-button"
+        >
+          Get Tanaki
+        </a>
+      </div>
       <div className="max-w-sm pt-10 mx-auto my-20 text-center">
         <img src="iphone-tanaki-show.png" alt="The Tanaki Show" />
         <span className="block pb-4 text-3xl text-white max-w-" style={shadow}>
@@ -62,6 +70,13 @@ function App() {
         Make friends and art in Discord.
       </span>
 
+      <br />
+      <a
+        href="/download"
+        className="inline-block p-10 mx-auto my-20 text-5xl font-bold text-center text-black bg-white rounded-full download-button"
+      >
+        Get Tanaki
+      </a>
       <div className="pt-20 mx-auto my-20 text-center w-200">
         <img
           className="w-20 mx-auto mb-4"
