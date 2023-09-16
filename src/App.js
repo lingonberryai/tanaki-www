@@ -1,17 +1,8 @@
 import { TanakiModel } from './TanakiModel'
 import './App.css'
+import { handleImageError } from './imageUtils' // Import image utility function
 
 function App() {
-  const shadow = {
-    textShadow:
-      '0 var(--text-shadow-offset-y) 10px #1D014C, 0 var(--text-shadow-offset-y) 20px #6600cc',
-  }
-
-  const glow = {
-    textShadow:
-      '0 var(--text-shadow-offset-y) 10px #ffffff, 0 var(--text-shadow-offset-y) 100px #FFC700',
-  }
-
   return (
     <div className="container mx-auto text-center main">
       <div className="flex justify-center">
@@ -19,18 +10,12 @@ function App() {
       </div>
 
       <div className="flex flex-col text-white">
-        <h1 className="pb-3 text-7xl" style={shadow}>
-          Tanaki
-        </h1>
-        <h2 className="pb-8 text-5xl" style={shadow}>
-          タナキ
-        </h2>
+        <h1 className="pb-3 text-7xl shadow">Tanaki</h1>
+        <h2 className="pb-8 text-5xl shadow">タナキ</h2>
 
-        <span className="text-3xl" style={shadow}>
-          Your creative superfriend.
-        </span>
+        <span className="text-3xl shadow">Your creative superfriend.</span>
 
-        <span className="block mt-2 text-xl text-black " style={glow}>
+        <span className="block mt-2 text-xl text-black glow">
           With you, wherever you go.
         </span>
       </div>
@@ -50,11 +35,9 @@ function App() {
             src="iphone-tanaki-show.webp"
             alt="The Tanaki Show"
             loading="lazy"
+            onError={handleImageError('/iphone-tanaki-show.png')} // Pass fallback image
           />
-          <span
-            className="block pb-4 text-3xl text-white max-w-"
-            style={shadow}
-          >
+          <span className="block pb-4 text-3xl text-white max-w- shadow">
             Watch The Tanaki Show.
           </span>
           <span className="p-8 text-2xl font-bold live">LIVE</span>
@@ -70,27 +53,34 @@ function App() {
             src="paint.webp"
             alt="Tanaki Paint App"
             loading="lazy"
+            onError={handleImageError('/paint.png')} // Pass fallback image
           />
-          <span className="text-4xl text-white " style={shadow}>
-            Paint with Tanaki.
-          </span>
+          <span className="text-4xl text-white shadow">Paint with Tanaki.</span>
         </div>
       </a>
 
       <br />
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center">
-        <img className="mb-2" src="text.webp" alt="The Tanaki Show" />
-        <span className="text-4xl text-white" style={shadow}>
-          Text Tanaki.
-        </span>
+        <img
+          className="mb-2"
+          src="text.webp"
+          alt="The Tanaki Show"
+          onError={handleImageError('/text.png')} // Pass fallback image
+        />
+        <span className="text-4xl text-white shadow">Text Tanaki.</span>
       </div>
 
       <br />
 
       <a className="big-link" href="/download">
-        <img className="pt-10" src="discord.webp" alt="Discord" />
-        <span className="text-4xl text-white" style={shadow}>
+        <img
+          className="pt-10"
+          src="discord.webp"
+          alt="Discord"
+          onError={handleImageError('/discord.png')} // Pass fallback image
+        />
+        <span className="text-4xl text-white shadow">
           Make friends and art in Discord.
         </span>
       </a>
@@ -115,15 +105,12 @@ function App() {
             alt="Lingonberry Intelligence"
           />
 
-          <span className="text-white " style={shadow}>
+          <span className="text-white shadow">
             Tanaki is brought to you by <br /> Lingonberry Intelligence.
           </span>
         </div>
       </a>
-      <div
-        className="flex-row max-w-md pb-12 mx-auto space-x-8 text-white"
-        style={shadow}
-      >
+      <div className="flex-row max-w-md pb-12 mx-auto space-x-8 text-white shadow">
         <a href="mailto:pasquale@altbizney.com">contact</a>
         <a href="https://twitter.com/lingonberryai">privacy</a>
         <a href="https://twitter.com/hellotanaki">twitter</a>
