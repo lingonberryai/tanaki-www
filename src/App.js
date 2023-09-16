@@ -13,8 +13,9 @@ function App() {
         <TanakiModel />
       </div>
 
-      <div className='text-white'>
-        {/* Apply the text shadow variable to your text elements */}
+    
+
+      <div className='flex flex-col text-white'>
         <h1 className='pb-3 text-7xl' style={shadowStyle}>
           Tanaki
         </h1>
@@ -23,21 +24,48 @@ function App() {
         </h2>
 
         <span className='text-3xl' style={shadowStyle}>
-          Your creative superfriend.
+          Your creative superfriend
         </span>
-        <br />
-        <span className='block pt-2 text-xl' style={shadowStyle}>
-          Wherever you go, Tanaki is there for you.
+        
+        <span className='block mt-2 text-xl' style={shadowStyle}>
+          Wherever you go, Tanaki is there for you
         </span>
       </div>
 
-      <img className="max-w-md pt-10" src="show.png" alt="The Tanaki Show" />
+      <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
+        <img src="show.png" alt="The Tanaki Show" />
+        <span className='text-2xl text-white' style={shadowStyle}>
+          Watch The Tanaki Show
+        </span>
+        <span className='live'>LIVE</span>
+      </div>
+
+      <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
+        <img src="show.png" alt="The Tanaki Show" />
+        <span className='text-2xl text-white' style={shadowStyle}>
+          Paint with Tanaki
+        </span>
+  
+      </div>
+
+      <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
+        <img src="show.png" alt="The Tanaki Show" />
+        <span className='text-2xl text-white' style={shadowStyle}>
+          Text Tanaki
+        </span>
+      </div>
 
       <img className="pt-10" src="discord.png" alt="Discord" />
       <span className='text-2xl text-white' style={shadowStyle}>
-        Make friends and art in Discord.
+        Make new friends and art in Discord.
       </span>
+
+      <div className='pt-20 mx-auto my-20 text-center w-200'>
+        <img className="w-20 mx-auto" src="lingonberry-logo.svg" alt="Lingonberry Intelligence" />
+        <span className='my-4 text-white' style={shadowStyle}>Tanaki is brought to you by <br/> Lingonberry Intelligence</span>
+      </div>
     </div>
+    
   );
 }
 
