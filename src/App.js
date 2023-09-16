@@ -121,7 +121,7 @@ function App() {
         </div>
       </a>
       <div
-        className="flex-row max-w-md pb-12 mx-auto space-x-16 text-white"
+        className="flex-row max-w-md pb-12 mx-auto space-x-8 text-white"
         style={shadow}
       >
         <a href="mailto:pasquale@altbizney.com">contact</a>
