@@ -24,45 +24,46 @@ function App() {
         </h2>
 
         <span className='text-3xl' style={shadowStyle}>
-          Your creative superfriend
+          Your creative superfriend.
         </span>
         
         <span className='block mt-2 text-xl' style={shadowStyle}>
-          Wherever you go, Tanaki is there for you
+          Wherever you go, Tanaki is there for you.
         </span>
       </div>
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
         <img src="show.png" alt="The Tanaki Show" />
-        <span className='text-2xl text-white' style={shadowStyle}>
-          Watch The Tanaki Show
+        <span className='block max-w-sm pb-4 text-4xl text-white' style={shadowStyle}>
+          Watch  The Tanaki Show
         </span>
-        <span className='live'>LIVE</span>
+        
+        <span className='p-8 text-2xl font-bold live'>LIVE</span>
       </div>
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
         <img src="show.png" alt="The Tanaki Show" />
-        <span className='text-2xl text-white' style={shadowStyle}>
-          Paint with Tanaki
+        <span className='text-4xl text-white' style={shadowStyle}>
+          Paint with Tanaki.
         </span>
   
       </div>
 
       <div className="max-w-sm pt-10 mx-auto my-20 text-center"> 
         <img src="show.png" alt="The Tanaki Show" />
-        <span className='text-2xl text-white' style={shadowStyle}>
-          Text Tanaki
+        <span className='text-4xl text-white' style={shadowStyle}>
+          Text Tanaki.
         </span>
       </div>
 
       <img className="pt-10" src="discord.png" alt="Discord" />
-      <span className='text-2xl text-white' style={shadowStyle}>
+      <span className='text-4xl text-white' style={shadowStyle}>
         Make new friends and art in Discord.
       </span>
 
       <div className='pt-20 mx-auto my-20 text-center w-200'>
-        <img className="w-20 mx-auto" src="lingonberry-logo.svg" alt="Lingonberry Intelligence" />
-        <span className='my-4 text-white' style={shadowStyle}>Tanaki is brought to you by <br/> Lingonberry Intelligence</span>
+        <img className="w-20 mx-auto mb-4" src="lingonberry-logo.svg" alt="Lingonberry Intelligence" />
+        <span className='text-white ' style={shadowStyle}>Tanaki is brought to you by <br/> Lingonberry Intelligence.</span>
       </div>
     </div>
     
