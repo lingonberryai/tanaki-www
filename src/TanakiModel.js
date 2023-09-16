@@ -141,11 +141,18 @@ function AnimatedModel({ url }) {
 export function TanakiModel() {
   return (
     <Canvas style={{ width: '400px', height: '340px' }}>
-      <ambientLight intensity={1} />
+      <ambientLight intensity={1.2} />
       <directionalLight
         position={[5, 10, 5]} // position it in the scene
-        intensity={1} // light intensity
+        intensity={0.5} // light intensity
         castShadow // enable shadow casting
+      />
+      <pointLight
+        position={[0, -1, -1]} // Adjust the position according to your scene
+        intensity={20} // Adjust the intensity as needed
+        distance={10} // Adjust the distance the light affects
+        decay={1} // Adjust the light decay
+        color="white" // Light color
       />
       <AnimatedModel url="./tanaki.glb" />
     </Canvas>
