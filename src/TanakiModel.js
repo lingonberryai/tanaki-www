@@ -19,6 +19,7 @@ function AnimatedModel({ url }) {
 
   const handMeshes = ['handL_1', 'handR_1']
   const bodyMesh = 'BodyMesh001'
+  const eyes = ['eyeM', 'eyeM001', 'eyeM002']
 
   useEffect(() => {
     if (animations && animations.length) {
@@ -47,6 +48,11 @@ function AnimatedModel({ url }) {
     scene.traverse((object) => {
       if (object.isMesh && handMeshes.includes(object.name)) {
         object.material = new MeshStandardMaterial({ color: 'yellow' })
+        object.material.needsUpdate = true
+      }
+
+      if (object.isMesh && eyes.includes(object.name)) {
+        object.material = new MeshStandardMaterial({ color: 'white' })
         object.material.needsUpdate = true
       }
 
