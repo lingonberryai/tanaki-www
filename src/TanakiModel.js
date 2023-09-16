@@ -9,6 +9,9 @@ function AnimatedModel({ url }) {
     const { clock } = useThree();
     const mixerRef = useRef(null);
 
+    // 30fps in seconds
+    const frameTime = 300000;
+
     useEffect(() => {
         if (animations && animations.length) {
             mixerRef.current = new AnimationMixer(scene);
@@ -18,7 +21,7 @@ function AnimatedModel({ url }) {
 
             const animate = () => {
                 if (mixerRef.current) {
-                    mixerRef.current.update(clock.getDelta());
+                    mixerRef.current.update(frameTime);  // Use frameTime instead of clock.getDelta()
                 }
                 requestAnimationFrame(animate);
             }
@@ -37,17 +40,22 @@ function AnimatedModel({ url }) {
     }, [animations, scene, clock]);
 
     return (
-        <primitive object={scene} position={[0, 1, 0]} children-0-castShadow />
+        <primitive object={scene} position={[0, -0.5, 0]} scale={[2, 2, 2]} children-0-castShadow />
     );
 }
 
 export function TanakiModel() {
     return (
-        <Canvas style={{ width: '100%', height: '500px' }}>
-            <mesh>
-                {/* <torusKnotGeometry /> */}
-                {/* <meshNormalMaterial /> */}
-            </mesh>
+        <Canvas style={{ width: '100%', height: '1000px' }}>
+
+            <ambientLight intensity={0.5} />
+
+
+            <directionalLight
+                position={[5, 10, 5]} // position it in the scene
+                intensity={1}         // light intensity
+                castShadow            // enable shadow casting
+            />
             <AnimatedModel url='./tanaki.glb' />
         </Canvas>
     );
