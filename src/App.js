@@ -1,13 +1,24 @@
 import { TanakiModel } from './TanakiModel'
 import './App.css'
 import { handleImageError } from './imageUtils' // Import image utility function
+import ThoughtText from './ThoughtText'
 
 function App() {
   return (
     <div className="container mx-auto text-center main">
       <div className="flex justify-center">
+        <ThoughtText text="Thinking up dynamic insights for your next TikTok LIVE ..." />
+      </div>
+      <div className="flex justify-center">
         <TanakiModel />
       </div>
+      
+      {/* <div class="thought-bubble">
+          <p>
+            Your thoughtful text here, pondering the mysteries of the universe
+            or just what to have for lunch.
+          </p>
+      </div> */}
 
       <div className="flex flex-col text-white">
         <h1 className="pb-3 shadow text-7xl">Tanaki</h1>

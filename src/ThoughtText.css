@@ -1,0 +1,36 @@
+.thought-bubble {
+    position: relative;
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #000;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  /* Add the little circles to simulate a thought */
+  .thought-bubble::before,
+  .thought-bubble::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #000;
+  }
+  
+  /* Position the first circle */
+  .thought-bubble::before {
+    bottom: -20px;
+    left: 100px;
+  }
+  
+  /* Position the second circle */
+  .thought-bubble::after {
+    bottom: -35px;
+    left: 115px;
+    width: 10px;
+    height: 10px;
+  }

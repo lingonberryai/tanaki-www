@@ -91,14 +91,16 @@
 
 body,
 html {
-  background-image: url('../public/space.png');
+  /* background-image: url('../public/space.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #00ff00;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 @media (max-width: 768px) {
