@@ -5,120 +5,71 @@
   --text-shadow-offset-y: 2px;
 }
 
-.live {
-  background-color: red;
-  color: white;
-  padding: 8px;
-  border-radius: 12px;
-  margin-left: 8px;
-  margin-bottom: 4px;
-}
-
-.download-button {
-  background: linear-gradient(180deg, #fff 69.31%, #ffe600 139.11%);
-  transition: all 0.2s ease-in-out;
-  color: #5a24ac;
-}
-.download-button:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  color: black;
-}
-
-.big-link {
-  transition: all 0.5s cubic-bezier(0.23, 0.01, 0, 1);
-  display: inline-block;
-  clear: both;
-}
-
-.big-link:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.big-link:active {
-  transform: scale(0.95);
-}
-
-.lingonberry {
-  transition: all 0.2s cubic-bezier(0.23, 0.01, 0, 1);
-  display: inline-block;
-}
-
-.lingonberry:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.lingonberry:active {
-  transform: scale(0.95);
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body,
-html {
-  /* background-image: url('../public/space.png'); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  background-color: #00ff00;
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-}
-
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-    background-size: auto;
-    background-position: top;
-    background-attachment: fixed, scroll;
-    background-repeat: no-repeat;
-  }
-}
 
 .shadow {
   box-shadow: none;
   text-shadow: 0 var(--text-shadow-offset-y) 10px #1D014C, 0 var(--text-shadow-offset-y) 20px #6600cc;
 }
 
-.glow {
-  text-shadow: 0 var(--text-shadow-offset-y) 10px #ffffff, 0 var(--text-shadow-offset-y) 100px #FFC700;
+
+/* Container for iframe and overlays */
+.container {
+  position: relative; /* Set a positioning context for absolute positioned child elements */
+  width: 540px;
+  height: 960px;
+  margin: 0 auto; /* Center container */
+}
+
+/* Styles for iframe */
+iframe {
+  width: 540px;
+  height: 960px;
+  border: none; /* Remove any default borders */
+  z-index: 1; 
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;  /* adjust as needed */
+    height: auto; /* adjust as needed */
+  }
+  /* Tanaki positioned vertically centered between two sections */
+  .tanaki-model {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 20%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the element's own width/height */
+    z-index: 3;
+  }
+  
+  /* Thought bubble positioned right above Tanaki */
+  .thought-bubble {
+    position: absolute;
+    bottom: calc(50% + 60px); /* Assuming Tanaki's height is around 120px, adjust accordingly */
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Tanaki positioned horizontally centered between two sections */
+  .tanaki-model {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  
+  /* Thought bubble positioned right above Tanaki */
+  .thought-bubble {
+    position: absolute;
+    bottom: calc(50% + 60px); 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 2;
+  }
 }
 

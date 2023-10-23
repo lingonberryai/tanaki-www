@@ -1,17 +1,21 @@
-.thought-bubble {
-    position: relative;
-    max-width: 300px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px #000;
-    text-align: center;
-    word-wrap: break-word;
-  }
-  
-  /* Add the little circles to simulate a thought */
-  .thought-bubble::before,
-  .thought-bubble::after {
+/* .thought-bubble {
+  position: absolute;
+  max-width: 500px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 100px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #000;
+  text-align: left;
+  word-wrap: break-word;
+} */
+
+/* Add the little circles to simulate a thought */
+/* .thought-bubble::before,
+.thought-bubble::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -19,18 +23,78 @@
     background-color: white;
     border-radius: 50%;
     box-shadow: 0px 0px 5px #000;
+  } */
+
+/* Position the first circle */
+.thought-bubble::before {
+  bottom: -10px;
+  left: 10px;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #000;
+}
+
+/* Position the second circle */
+.thought-bubble::after {
+  bottom: -30px;
+  left: -10px;
+  width: 10px;
+  height: 10px;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #000;
+}
+
+@media (max-width: 768px) {
+  /* Thought bubble positioned right above Tanaki */
+  .thought-bubble {
+    position: absolute;
+    bottom: calc(
+      50% + 00px
+    ); /* Assuming Tanaki's height is around 120px, adjust accordingly */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    max-width: 500px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 100px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #000;
+    text-align: left;
+    word-wrap: break-word;
   }
-  
-  /* Position the first circle */
-  .thought-bubble::before {
-    bottom: -20px;
-    left: 100px;
+}
+
+@media (min-width: 769px) {
+  /* Thought bubble positioned right above Tanaki */
+  .thought-bubble {
+    position: absolute;
+    bottom: calc(50% + 0px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    max-width: 500px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 100px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #000;
+    text-align: left;
+    word-wrap: break-word;
   }
-  
-  /* Position the second circle */
-  .thought-bubble::after {
-    bottom: -35px;
-    left: 115px;
-    width: 10px;
-    height: 10px;
-  }
+}
