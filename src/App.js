@@ -73,7 +73,7 @@ function App() {
 
       <br />
 
-      <a className="big-link" href="/download">
+      <a className="big-link" href="/discord">
         <img
           className="pt-10"
           src="discord.webp"
