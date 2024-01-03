@@ -22,7 +22,7 @@ function App() {
 
       <div className="my-16">
         <a
-          href="/download"
+          href="/discord"
           className="inline-block p-5 mx-auto text-4xl font-bold text-center text-black bg-white rounded-full download-button"
         >
           Get Tanaki
