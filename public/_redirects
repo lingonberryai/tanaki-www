@@ -1,11 +1,10 @@
 # Redirects from what the browser requests to what we serve
-/home               /
-/paint              https://lingonberryai.notion.site/Tanaki-Paint-d0feded0ddff410098d9841547c4dd47
-/discord            https://discord.gg/YHA2jCuPb7
-/download           https://apps.apple.com/us/app/tanaki-ai/id6475178432
-/register           https://forms.gle/AAU179fzSTxtRoqz8
-/beta               https://testflight.apple.com/join/nNxyvMxN
-/privacy            https://psql.notion.site/Privacy-bd91b1b93d3c41998322792ef9968f3f?pvs=4
 
-
-
+/ https://lingonberry.ai/tanaki 301!
+/home /
+/paint https://lingonberryai.notion.site/Tanaki-Paint-d0feded0ddff410098d9841547c4dd47
+/discord https://discord.gg/YHA2jCuPb7
+/download https://apps.apple.com/us/app/tanaki-ai/id6475178432
+/register https://forms.gle/AAU179fzSTxtRoqz8
+/beta https://testflight.apple.com/join/nNxyvMxN
+/privacy https://psql.notion.site/Privacy-bd91b1b93d3c41998322792ef9968f3f?pvs=4
